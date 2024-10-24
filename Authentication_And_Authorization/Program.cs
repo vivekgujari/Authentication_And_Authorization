@@ -17,7 +17,6 @@ builder.Services.AddDbContext<JwtContext>
 builder.Services.AddTransient<IEmployeeService, EmployeeService>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer
     (options =>
     {
@@ -51,6 +50,7 @@ app.UseRouting();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
