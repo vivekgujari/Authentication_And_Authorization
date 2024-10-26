@@ -1,0 +1,22 @@
+#github action to deploy Auth api
+
+name: Deploy Authentication_And_Authorization project
+
+on:
+    workflow_dispatch:
+  
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup .Net Core
+              uses: actions/setup-dotnet@v3
+              with:
+                dotnet-version: 6.0.x
+
+            - name: Install dependencies
+              run: dotnet restore ./Authentication_And_Authorization/Authentication_And_Authorization.csproj
+
+            - name: Build
+              run: dotnet build ./Authentication_And_Authorization/Authentication_And_Authorization.csproj
