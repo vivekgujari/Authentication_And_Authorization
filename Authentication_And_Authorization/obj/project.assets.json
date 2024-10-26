@@ -2584,11 +2584,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Authentication_And-Authorization\\Authentication_And_Authorization\\Authentication_And_Authorization.csproj",
+      "projectUniqueName": "D:\\Auth\\Authentication_And_Authorization\\Authentication_And_Authorization.csproj",
       "projectName": "Authentication_And_Authorization",
-      "projectPath": "D:\\Authentication_And-Authorization\\Authentication_And_Authorization\\Authentication_And_Authorization.csproj",
+      "projectPath": "D:\\Auth\\Authentication_And_Authorization\\Authentication_And_Authorization.csproj",
       "packagesPath": "C:\\Users\\Vivek Gujari\\.nuget\\packages\\",
-      "outputPath": "D:\\Authentication_And-Authorization\\Authentication_And_Authorization\\obj\\",
+      "outputPath": "D:\\Auth\\Authentication_And_Authorization\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2671,13 +2671,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Authentication_And-Authorization\\Authentication_And_Authorization\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
