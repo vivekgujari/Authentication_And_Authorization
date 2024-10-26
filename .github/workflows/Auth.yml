@@ -4,6 +4,9 @@ name: Deploy Authentication_And_Authorization project
 
 on:
     workflow_dispatch:
+ 
+env:
+    AZURE_WEBAPP_NAME: "Azure-group-1"    
   
 jobs:
     build:
@@ -19,4 +22,17 @@ jobs:
               run: dotnet restore ./Authentication_And_Authorization/Authentication_And_Authorization.csproj
 
             - name: Build
-              run: dotnet build ./Authentication_And_Authorization/Authentication_And_Authorization.csproj
+              run: dotnet build ./Authentication_And_Authorization/Authentication_And_Authorization.csproj --configuration Release --no-restore
+
+            # publish
+            - name: Publish
+              run: dotnet publish ./Authentication_And_Authorization/Authentication_And_Authorization.csproj --configuration Release --no-build --output ./publish
+
+            # deploy
+            # - name: Deploy
+            #   uses: azure/webapps-deploy@v2
+            #   with:
+            #     app-name: ${{ env.AZURE_WEBAPP_NAME }}
+            #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+            #     package: ./publish
+              
