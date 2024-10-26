@@ -32,7 +32,7 @@ jobs:
             - name: Deploy
               uses: azure/webapps-deploy@v2
               with:
-                app-name: ${{ env.API_PUBLISH_SECRET }}
-                publish-profile: ${{ secrets. }}
+                app-name: ${{ env.AZURE_WEBAPP_NAME }}
+                publish-profile: ${{ secrets.API_PUBLISH_SECRET }}
                 package: ./publish
               
